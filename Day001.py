@@ -1,16 +1,4 @@
-# Repository cloned
-print("hello world!")
-
-# easy
-
-# use \n for new line
-
-print("hello \nworld")
-
-# concatenate
-
-print("Hello" + " " + "John")
-
-# user input
-
-print("Hello " + input("what is your name? "))
+print("hello world!")  # Print function
+print("hello \nworld")  # use \n for new line
+print("Hello" + " " + "John")  # concatenate
+print("Hello " + input("what is your name? "))  # user input
