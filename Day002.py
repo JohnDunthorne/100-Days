@@ -1,3 +1,7 @@
 # use \n for new line
 
-print("hello \n world")
+print("hello \nworld")
+
+# concatenate
+
+print("Hello" + " " + "John")
