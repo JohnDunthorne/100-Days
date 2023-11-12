@@ -5,9 +5,9 @@ number = (4 // 2) # // gives a floor division, which will return a rounded down 
 
 # Day 2 project tip calculator
 
-total_bill = int(input("What was the total bill? "))
+total_bill = float(input("What was the total bill? "))
 split = int(input("How many people will be paying? "))
-tip = int(input("How much of  tip would you like to give as a percentage? "))
+tip = float(input("How much of tip would you like to give as a percentage? "))
 total_with_tip = total_bill + (total_bill/100 * tip)
 total_for_each = total_with_tip / split
 print(round(total_for_each, 2))
