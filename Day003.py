@@ -50,24 +50,24 @@
 
 
 # Love calculator
-name1 = "Brad Pitt"
-name2 = "Jennifer Aniston"
-both_names = name1 + name2
-name_true = ""
-name_love = ""
-for letter in both_names:
-    if letter.lower() in ["t", "r", "u", "e"]:
-        name_true += letter
-for letter in both_names:
-    if letter.lower() in ["l", "o", "v", "e"]:
-        name_love += letter
-name_true_digit = len(name_true)
-name_love_digit = len(name_love)
-score = int(f"{name_true_digit}{name_love_digit}")
-print(f"Your score is {score}", end="")
-if score < 10 or score > 90:
-    print(", you go together like coke and mentos.")
-elif score >= 40 and score <= 50:
-    print(", you are alright together.")
-else:
-    print(".")
+# name1 = "Brad Pitt"
+# name2 = "Jennifer Aniston"
+# both_names = name1 + name2
+# name_true = ""
+# name_love = ""
+# for letter in both_names:
+#     if letter.lower() in ["t", "r", "u", "e"]:
+#         name_true += letter
+# for letter in both_names:
+#     if letter.lower() in ["l", "o", "v", "e"]:
+#         name_love += letter
+# name_true_digit = len(name_true)
+# name_love_digit = len(name_love)
+# score = int(f"{name_true_digit}{name_love_digit}")
+# print(f"Your score is {score}", end="")
+# if score < 10 or score > 90:
+#     print(", you go together like coke and mentos.")
+# elif score >= 40 and score <= 50:
+#     print(", you are alright together.")
+# else:
+#     print(".")
