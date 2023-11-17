@@ -7,15 +7,15 @@
 # != not equal to
 
 # # Which year do you want to check?
-# year = 2100
+year = 2100
 
 # # 🚨 Don't change the code above 👆
 
 # # Write your code below this line 👇
-# if (year % 4 == 0 or year % 400 == 0) and not year % 100 == 0:
-#     print("Leap year")
-# else:
-#     print("Not leap year")
+if (year % 4 == 0 or year % 400 == 0) and not year % 100 == 0:
+    print("Leap year")
+else:
+    print("Not leap year")
 
 
 # print("Thank you for choosing Python Pizza Deliveries!")
@@ -50,27 +50,27 @@
 
 
 # Love calculator
-# name1 = "Brad Pitt"
-# name2 = "Jennifer Aniston"
-# both_names = name1 + name2
-# name_true = ""
-# name_love = ""
-# for letter in both_names:
-#     if letter.lower() in ["t", "r", "u", "e"]:
-#         name_true += letter
-# for letter in both_names:
-#     if letter.lower() in ["l", "o", "v", "e"]:
-#         name_love += letter
-# name_true_digit = len(name_true)
-# name_love_digit = len(name_love)
-# score = int(f"{name_true_digit}{name_love_digit}")
-# print(f"Your score is {score}", end="")
-# if score < 10 or score > 90:
-#     print(", you go together like coke and mentos.")
-# elif score >= 40 and score <= 50:
-#     print(", you are alright together.")
-# else:
-#     print(".")
+name1 = "John Dunthorne"
+name2 = "Brittany Duman"
+both_names = name1 + name2
+name_true = ""
+name_love = ""
+for letter in both_names:
+    if letter.lower() in ["t", "r", "u", "e"]:
+        name_true += letter
+for letter in both_names:
+    if letter.lower() in ["l", "o", "v", "e"]:
+        name_love += letter
+name_true_digit = len(name_true)
+name_love_digit = len(name_love)
+score = int(f"{name_true_digit}{name_love_digit}")
+print(f"Your score is {score}", end="")
+if score < 10 or score > 90:
+    print(", you go together like coke and mentos.")
+elif score >= 40 and score <= 50:
+    print(", you are alright together.")
+else:
+    print(".")
 print(
     """
                        ."-,.__
