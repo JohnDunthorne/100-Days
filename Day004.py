@@ -7,5 +7,3 @@ if heads_or_tails == 1:
     print("Heads")
 else:
     print("Tails")
-
-    #
