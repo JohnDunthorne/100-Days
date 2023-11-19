@@ -35,3 +35,31 @@ _______________"""
 scissors = """
 O--/
 0--\\"""
+user_choice = int(input("whats your choice? 0 = rock, 1 = paper, 2 = scissors\n"))
+computer_choice = random.randint(0, 2)
+
+print("You Chose\n")
+if user_choice == "0":
+    print(rock)
+elif user_choice == "1":
+    print(paper)
+else:
+    print(scissors)
+print("\nComputer Chose\n")
+if computer_choice == "0":
+    print(rock)
+elif computer_choice == "1":
+    print(paper)
+else:
+    print(scissors)
+print("")
+if user_choice == computer_choice:
+    print("There was a draw")
+elif (
+    (user_choice == 0 and computer_choice == 2)
+    or (user_choice == 1 and computer_choice == 0)
+    or (user_choice == 2 and computer_choice == 1)
+):
+    print("You Win")
+else:
+    print("You lose")
