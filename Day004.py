@@ -7,4 +7,10 @@ if heads_or_tails == 1:
     print("Heads")
 else:
     print("Tails")
-    
+
+# nested lists
+list1 = [1, 2, 3, 4, 5, 6, 7]
+list2 = ["a", "b", "c", "d", "e", "f", "g"]
+
+list3 = [list1, list2]
+print(f"{list1}\n{list2}\n{list3}")
