@@ -3,7 +3,7 @@
 # for fruit in fruits:
 #     print(fruit)
 
-# random password generator #
+# random password generator
 
 import random
 
