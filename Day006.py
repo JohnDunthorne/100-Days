@@ -3,7 +3,7 @@
 # for item in a list, for item in (variable):
 # for loops check each item in a list or range
 
-# while number > 3: while loops will continue forever as long as the requirements are True
+# while number > 3: while loops will continue forever as long as the condition is True
 count = 10
 
 while count >= 0:
