@@ -4,11 +4,11 @@
 # for loops check each item in a list or range
 
 # while number > 3: while loops will continue forever as long as the condition is True
-count = 10
+# count = 10
 
-while count >= 0:
-    print(count)
-    count -= 1
+# while count >= 0:
+#     print(count)
+#     count -= 1
 
     # reborgs world maze 
 #     def right():
