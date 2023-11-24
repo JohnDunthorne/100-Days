@@ -1,6 +1,12 @@
 # hangman
 import random
+import os
+
+def clear_terminal():
+    os.system('cls')
+clear_terminal()
 print('''
+                Welcome to:
  __ __   ____  ____    ____  ___ ___   ____  ____  
 |  |  | /    ||    \  /    ||   |   | /    ||    \ 
 |  |  ||  o  ||  _  ||   __|| _   _ ||  o  ||  _  |
@@ -8,6 +14,8 @@ print('''
 |  |  ||  _  ||  |  ||  |_ ||   |   ||  _  ||  |  |
 |  |  ||  |  ||  |  ||     ||   |   ||  |  ||  |  |
 |__|__||__|__||__|__||___,_||___|___||__|__||__|__|
+      
+             Press Enter to play
       
 ''')
 word_list = [
@@ -117,7 +125,7 @@ while numberoflives > 0:
 
     while "_" in display:
         guess = input("Guess a letter: ").lower()
-
+        clear_terminal()
         newdisplay = ""
         correctguess = False
         for i in range(len(chosen_word)):
