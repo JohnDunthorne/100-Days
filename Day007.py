@@ -26,11 +26,15 @@ while numberoflives > 0:
 
         if not correctguess:
             numberoflives -= 1
-            print(numberoflives)
+            print(f"sorry {guess} is not in the word you have {numberoflives} tries left")
         if numberoflives <= 0:
             break
-
-    print("Congratulations! You guessed the word:", chosen_word)
+    if display == chosen_word:
+        print("Congratulations! You guessed the word:", chosen_word)
+        break
+    else:
+        print("Sorry you ran out of tries")
+        break
 
 
 
