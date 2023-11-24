@@ -3,10 +3,10 @@ import random
 import os
 
 def clear_terminal():
-    os.system('cls')
+    os.system('cls' if os.name == 'nt' else 'clear')
 clear_terminal()
-print('''
-                Welcome to:
+input('''
+                  Welcome to:
  __ __   ____  ____    ____  ___ ___   ____  ____  
 |  |  | /    ||    \  /    ||   |   | /    ||    \ 
 |  |  ||  o  ||  _  ||   __|| _   _ ||  o  ||  _  |
@@ -15,12 +15,10 @@ print('''
 |  |  ||  |  ||  |  ||     ||   |   ||  |  ||  |  |
 |__|__||__|__||__|__||___,_||___|___||__|__||__|__|
       
-             Press Enter to play
+              Press Enter to play
       
 ''')
-
-input("Press Enter to continue...")
-
+clear_terminal()
 word_list = [
     "abacus", "abbreviate", "aberration", "abhorrence", "abomination", "abstinence", "accelerate", "accentuate", 
     "accommodate", "accompaniment", "acquisition", "adulteration", "adventurous", "aesthetic", "affiliation", 
