@@ -56,7 +56,8 @@ BLUE = '\033[94m'
 ENDC = '\033[0m'
 chosen_word = random.choice(word_list)
 display = "_" * (len(chosen_word))
-print(f"Your word is this long: {display}")
+print(f"Your word is this long: ", end="")
+print(BLUE + display + ENDC)
 numberoflives = 6
 incorrectlyguessedletters = ""
 stages = ['''
