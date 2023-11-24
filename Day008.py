@@ -1,10 +1,12 @@
 
 
-def greet(name): # name is the parameter, parameters expect arguments when function is called
+def greet(name, birthday, age): # name is the parameter, parameters expect arguments when function is called
     print("hi")
     print(name)
-    print("how can i hellp you")
+    print(f"your birthday is on {birthday} that makes you {age}")
 
 my_name = "John"
-greet(my_name) # when calling a function that has parameters, arguments are expected, these can use variables or hard coded data
+my_birthday = "11/17/80"
+my_age = 43
+greet(my_name, my_birthday, my_age) # when calling a function that has parameters, arguments are expected, these can use variables or hard coded data
 # note that the arguments name does not have to match the paramenter name, but whatever is in the parentheses will be used as the argument.
