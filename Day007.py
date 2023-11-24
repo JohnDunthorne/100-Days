@@ -5,11 +5,17 @@ word_list = ["apple", "banana", "cherry", "orange", "grape", "kiwi", "melon", "p
 chosen_word = random.choice(word_list)
 
 print(chosen_word)
+display = "_ " * (len(chosen_word))
+print(display)
 
 guess = input("Guess a letter: ").lower()
 
+display = ""
+
 for letter in chosen_word:
     if letter == guess:
-        print(f"{letter} ", end="")
-    else:
-        print(f"_ ", end="")
+        display += f"{letter}"
+    elif letter != guess:
+        display += f"_ "
+
+print(display)
