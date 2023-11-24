@@ -2,10 +2,13 @@
 import random
 import os
 
+def print_centered(message, width=80):
+    print(message.center(width))
+
 def clear_terminal():
     os.system('cls' if os.name == 'nt' else 'clear')
 clear_terminal()
-input('''
+print_centered('''
                   Welcome to:
  __ __   ____  ____    ____  ___ ___   ____  ____  
 |  |  | /    ||    \  /    ||   |   | /    ||    \ 
@@ -18,6 +21,7 @@ input('''
               Press Enter to play
       
 ''')
+input("")
 clear_terminal()
 word_list = [
     "abacus", "abbreviate", "aberration", "abhorrence", "abomination", "abstinence", "accelerate", "accentuate", 
@@ -57,7 +61,7 @@ ENDC = '\033[0m'
 chosen_word = random.choice(word_list)
 display = "_" * (len(chosen_word))
 print(f"Your word is this long: ", end="")
-print(BLUE + display + ENDC)
+print(BLUE + ' '.join(display) + ENDC)
 numberoflives = 6
 incorrectlyguessedletters = ""
 stages = ['''
@@ -144,10 +148,10 @@ while numberoflives > 0:
             break
         print("")
         print(f"your word so far: ", end ="")
-        print(BLUE + display + ENDC)
+        print(BLUE + ' '.join(display) + ENDC)
         print(f"{stages[numberoflives]}")
         print(f"Letters you've tried already: ", end ="")
-        print(YELLOW + incorrectlyguessedletters + ENDC)
+        print(YELLOW + ' '.join(incorrectlyguessedletters) + ENDC)
         print("")
     if display == chosen_word:
         print(GREEN + "Congratulations! You guessed the word:", chosen_word + ENDC)
