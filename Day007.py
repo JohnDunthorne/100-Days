@@ -88,9 +88,6 @@ while numberoflives > 0:
                 newdisplay += display[i]
 
         display = newdisplay
-        print(f"your word so far: {display}")
-        print(f"{stages[numberoflives]}")
-        print(f"Letters you've tried already: {incorrectlyguessedletters}")
 
         if not correctguess:
             if guess not in incorrectlyguessedletters:
@@ -98,11 +95,14 @@ while numberoflives > 0:
                 numberoflives -= 1
             else:
                 print(f"you,ve already tried {guess}")
-            print(f"your word so far: {display}")
-            print(f"{stages[numberoflives]}")
-            print(f"Letters you've tried already: {incorrectlyguessedletters}")
+            
         if numberoflives <= 0:
             break
+        print("")
+        print(f"your word so far: {display}")
+        print(f"{stages[numberoflives]}")
+        print(f"Letters you've tried already: {incorrectlyguessedletters}")
+        print("")
     if display == chosen_word:
         print("Congratulations! You guessed the word:", chosen_word)
         break
