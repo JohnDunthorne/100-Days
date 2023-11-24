@@ -103,7 +103,9 @@ while numberoflives > 0:
             if guess not in incorrectlyguessedletters:
                 incorrectlyguessedletters += guess
                 numberoflives -= 1
-            print(f">>>>[{display}]<<<<")
+            else:
+                print(f"you,ve already tried {guess}")
+            print(f"your word so far >>>>[        {display}        ]<<<< your word so far")
             print(f"{stages[numberoflives]}")
             print(f"\n Letters you've tried already: {incorrectlyguessedletters}\n\n\n\n\n\n")
         if numberoflives <= 0:
