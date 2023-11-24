@@ -45,6 +45,12 @@ GREEN = '\033[92m'
 YELLOW = '\033[93m'
 BLUE = '\033[94m'
 ENDC = '\033[0m'
+GREEN_1 = '\033[32m'       # Green
+GREEN_2 = '\033[32;1m'     # Bright Green
+YELLOW_1 = '\033[33m'      # Yellow
+YELLOW_2 = '\033[33;1m'    # Bright Yellow
+RED_1 = '\033[31m'         # Red
+RED_2 = '\033[31;1m'       # Bright Red
 chosen_word = random.choice(word_list)
 display = "_" * (len(chosen_word))
 print(display)
@@ -133,7 +139,7 @@ while numberoflives > 0:
         if numberoflives <= 0:
             break
         print("")
-        print(f"your word so far:", end ="")
+        print(f"your word so far: ", end ="")
         print(BLUE + display + ENDC)
         print(f"{stages[numberoflives]}")
         print(f"Letters you've tried already: ", end ="")
