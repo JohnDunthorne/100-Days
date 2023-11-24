@@ -6,18 +6,28 @@ chosen_word = random.choice(word_list)
 print(chosen_word)
 display = "_" * (len(chosen_word))
 print(display)
-while "_" in display:
-    guess = input("Guess a letter: ").lower()
+numberoflives = 5
+while numberoflives > 0:
 
-    newdisplay = ""
-    for i in range(len(chosen_word)):
-        if chosen_word[i] == guess:
-            newdisplay += guess
-        else:
-            newdisplay += display[i]
+    while "_" in display:
+        guess = input("Guess a letter: ").lower()
 
-    display = newdisplay
-    print(display)
+        newdisplay = ""
+        correctguess = False
+        for i in range(len(chosen_word)):
+            if chosen_word[i] == guess:
+                newdisplay += guess
+                correctguess = True
+            else:
+                newdisplay += display[i]
 
-print("Congratulations! You guessed the word:", chosen_word)
+        display = newdisplay
+        print(display)
+
+        if not correctguess:
+            numberoflives -= 1
+
+    print("Congratulations! You guessed the word:", chosen_word)
+
+
 
