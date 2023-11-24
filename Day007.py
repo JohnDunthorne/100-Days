@@ -40,7 +40,11 @@ word_list = [
     "usurp", "vacillate", "vagabond", "vehement", "verisimilitude", "verbose", "vexatious", "vicarious", 
     "vindicate", "virulent", "voracious", "wanderlust", "xenophobia", "yesteryear", "zealous", "zeitgeist"
 ]
-
+RED = '\033[91m'
+GREEN = '\033[92m'
+YELLOW = '\033[93m'
+BLUE = '\033[94m'
+ENDC = '\033[0m'
 chosen_word = random.choice(word_list)
 display = "_" * (len(chosen_word))
 print(display)
@@ -124,19 +128,21 @@ while numberoflives > 0:
                 incorrectlyguessedletters += guess
                 numberoflives -= 1
             else:
-                print(f"you've already tried {guess}")
+                print(RED + f"you've already tried {guess}" + ENDC)
             
         if numberoflives <= 0:
             break
         print("")
-        print(f"your word so far: {display}")
+        print(f"your word so far:", end ="")
+        print(BLUE + display + ENDC)
         print(f"{stages[numberoflives]}")
-        print(f"Letters you've tried already: {incorrectlyguessedletters}")
+        print(f"Letters you've tried already: ", end ="")
+        print(YELLOW + incorrectlyguessedletters + ENDC)
         print("")
     if display == chosen_word:
-        print("Congratulations! You guessed the word:", chosen_word)
+        print(GREEN + "Congratulations! You guessed the word:", chosen_word + ENDC)
         break
     else:
-        print(f"Sorry you ran out of tries the word was {chosen_word}")
+        print(RED + f"Sorry you ran out of tries the word was {chosen_word}" + ENDC)
         print(f"{stages[numberoflives]}")
         break
