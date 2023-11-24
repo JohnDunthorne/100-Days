@@ -18,6 +18,9 @@ print('''
              Press Enter to play
       
 ''')
+
+input("Press Enter to continue...")
+
 word_list = [
     "abacus", "abbreviate", "aberration", "abhorrence", "abomination", "abstinence", "accelerate", "accentuate", 
     "accommodate", "accompaniment", "acquisition", "adulteration", "adventurous", "aesthetic", "affiliation", 
