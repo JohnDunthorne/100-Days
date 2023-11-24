@@ -26,6 +26,9 @@ while numberoflives > 0:
 
         if not correctguess:
             numberoflives -= 1
+            print(numberoflives)
+        if numberoflives <= 0:
+            break
 
     print("Congratulations! You guessed the word:", chosen_word)
 
