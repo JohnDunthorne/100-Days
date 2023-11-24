@@ -21,3 +21,21 @@ greet(birthday=my_birthday, age=my_age, name=my_name) #when doing key pairs like
 # above is the other version of arguments called keyword arguments, i take the name of the parameter, then assign the argument to it
 # i can now assign all my arguments to the parameters names in any order i wish.
 # as you can see above the argments are not in the correct order, but are paired with the parameter names.
+
+# Write your code below this line 👇
+import math
+
+def paint_calc(height, width, cover):
+  cans = math.ceil((height*width)/cover)
+  print(f"You'll need {cans} cans of paint.")
+
+
+
+# Write your code above this line 👆
+# Define a function called paint_calc() so the code below works.   
+
+# 🚨 Don't change the code below 👇
+test_h = 4
+test_w = 5
+coverage = 5
+paint_calc(height=test_h, width=test_w, cover=coverage)
