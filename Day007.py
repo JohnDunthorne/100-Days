@@ -54,15 +54,9 @@ GREEN = '\033[92m'
 YELLOW = '\033[93m'
 BLUE = '\033[94m'
 ENDC = '\033[0m'
-GREEN_1 = '\033[32m'       # Green
-GREEN_2 = '\033[32;1m'     # Bright Green
-YELLOW_1 = '\033[33m'      # Yellow
-YELLOW_2 = '\033[33;1m'    # Bright Yellow
-RED_1 = '\033[31m'         # Red
-RED_2 = '\033[31;1m'       # Bright Red
 chosen_word = random.choice(word_list)
 display = "_" * (len(chosen_word))
-print(display)
+print(f"Your word is this long: {display}")
 numberoflives = 6
 incorrectlyguessedletters = ""
 stages = ['''
