@@ -3,19 +3,21 @@ import random
 
 word_list = ["apple", "banana", "cherry", "orange", "grape", "kiwi", "melon", "peach", "pear", "plum"]
 chosen_word = random.choice(word_list)
-
 print(chosen_word)
-display = "_ " * (len(chosen_word))
+display = "_" * (len(chosen_word))
 print(display)
+while "_" in display:
+    guess = input("Guess a letter: ").lower()
 
-guess = input("Guess a letter: ").lower()
+    newdisplay = ""
+    for i in range(len(chosen_word)):
+        if chosen_word[i] == guess:
+            newdisplay += guess
+        else:
+            newdisplay += display[i]
 
-display = ""
+    display = newdisplay
+    print(display)
 
-for letter in chosen_word:
-    if letter == guess:
-        display += f"{letter}"
-    elif letter != guess:
-        display += f"_ "
+print("Congratulations! You guessed the word:", chosen_word)
 
-print(display)
