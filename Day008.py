@@ -1,4 +1,6 @@
-
+# passing arguments through functions
+# potitional arguements
+# keyword arguements
 
 def greet(name, birthday, age): # name is the parameter, parameters expect arguments when function is called
     print("hi")
