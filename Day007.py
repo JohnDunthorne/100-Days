@@ -137,6 +137,6 @@ while numberoflives > 0:
         print("Congratulations! You guessed the word:", chosen_word)
         break
     else:
-        print("Sorry you ran out of tries")
+        print(f"Sorry you ran out of tries the word was {chosen_word}")
         print(f"{stages[numberoflives]}")
         break
