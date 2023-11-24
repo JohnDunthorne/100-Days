@@ -1,8 +1,9 @@
 
 
-def greet():
+def greet(name):
     print("hi")
-    print("user")
+    print(name)
     print("how can i hellp you")
 
-greet()
+name = "John"
+greet(name)
