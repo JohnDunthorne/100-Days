@@ -7,7 +7,7 @@ print('''
 
 
 
-      
+
  __ __   ____  ____    ____  ___ ___   ____  ____  
 |  |  | /    ||    \  /    ||   |   | /    ||    \ 
 |  |  ||  o  ||  _  ||   __|| _   _ ||  o  ||  _  |
@@ -95,13 +95,14 @@ while numberoflives > 0:
                 newdisplay += display[i]
 
         display = newdisplay
-        print(f">>>>[{display}]<<<<")
+        print(f"your word so far >>>>[        {display}        ]<<<< your word so far")
         print(f"{stages[numberoflives]}")
         print(f"\nLetters you've tried already: {incorrectlyguessedletters}\n\n\n\n\n\n")
 
         if not correctguess:
-            incorrectlyguessedletters += guess
-            numberoflives -= 1
+            if guess not in incorrectlyguessedletters:
+                incorrectlyguessedletters += guess
+                numberoflives -= 1
             print(f">>>>[{display}]<<<<")
             print(f"{stages[numberoflives]}")
             print(f"\n Letters you've tried already: {incorrectlyguessedletters}\n\n\n\n\n\n")
