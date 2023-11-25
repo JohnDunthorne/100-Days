@@ -33,3 +33,23 @@ my_age = 43
 # test_w = 5
 # coverage = 5
 # paint_calc(height=test_h, width=test_w, cover=coverage)
+
+# Ceasar cipher
+
+
+def encrypt(text, shift):
+    shifted_word = ""
+    for letter in text:
+        index = alphabet.index(letter)
+        new_index = (index + shift) % 26
+        shifted_letter = alphabet[new_index]
+        shifted_word += shifted_letter
+    print(shifted_word)
+
+alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+
+# direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+# text = input("Type your message:\n").lower()
+# shift = int(input("Type the shift number:\n"))
+
+encrypt("uvwxyz", 1)
