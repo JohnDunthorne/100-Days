@@ -35,13 +35,13 @@ my_age = 43
 # paint_calc(height=test_h, width=test_w, cover=coverage)
 
 # Ceasar cipher
-def caesar(p_text, p_shift):
+def caesar(p_text, p_shift, p_direction):
     shifted_word = ""
     for letter in p_text:
         index = alphabet.index(letter)
-        if direction == "encode":
+        if p_direction == "encode":
             new_index = (index + p_shift) % 26
-        elif direction == "decode":
+        elif p_direction == "decode":
             new_index = (index - p_shift) % 26
         shifted_letter = alphabet[new_index]
         shifted_word += shifted_letter
@@ -55,7 +55,7 @@ def main():
     else:
         text = input("Type your message:\n").lower()
         shift = int(input("Type the shift number:\n"))
-        caesar(text, shift)
+        caesar(text, shift, direction)
 
 
 alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
