@@ -43,30 +43,33 @@ def caesar(p_text, p_shift, p_direction):
     for letter in p_text:
         if letter.isalpha():
             index = alphabet.index(letter)
-            if p_direction == "encode":
+            if p_direction == "e":
                 new_index = (index + p_shift) % 26
-            elif p_direction == "decode":
+            elif p_direction == "d":
                 new_index = (index - p_shift) % 26
             shifted_letter = alphabet[new_index]
             shifted_word += shifted_letter
         else:
             shifted_word += letter
-    print(f"your {p_direction}d word is {shifted_word}")
+    print(f"your shuffled word is {shifted_word}")
 
-def main(direction):
-    while direction != "decode" and direction != "encode":
-        direction = input("Please type 'encode' to encrypt, type 'decode' to decrypt:\n")
+def main():
+    direction = input("To encode type 'E' and to decode type 'D':\n").lower()
+    while direction != "d" and direction != "e":
+        direction = input("To encode type 'E' and to decode type 'D':\n").lower()
     else:
         text = input("Type your message:\n").lower()
         shift = int(input("Type the shift number:\n"))
         caesar(text, shift, direction)
+        answer = input("would you like to try again? press Y for yes an N for no:\n").lower()
+        retry(answer)
 
 def retry(answer):
     while answer != "n" and answer != "y":
-        answer = input("would you like to try again? press Y for yes an N for no:")
+        answer = input("would you like to try again? press Y for yes an N for no:\n")
     else:
         if answer == "y":
-            main(direction)
+            main()
         elif answer == "n":
             sys.exit()
 
@@ -91,7 +94,5 @@ print('''
    \ \_______\ \__\ \__\    \ \__\ \__\ \_______\ \__\\\ _\      
     \|_______|\|__|\|__|     \|__|\|__|\|_______|\|__|\|__|
       ''')
-direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
-main(direction)
-answer = input("would you like to try again? press Y for yes an N for no:").lower()
-retry(answer)
+
+main()
