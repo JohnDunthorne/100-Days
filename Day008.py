@@ -46,14 +46,19 @@ def caesar(p_text, p_shift):
         shifted_letter = alphabet[new_index]
         shifted_word += shifted_letter
     print(shifted_word)
-    
-alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
-direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
-text = input("Type your message:\n").lower()
-shift = int(input("Type the shift number:\n"))
-while True:
-    if direction != "decode" or direction != "encode":
-        print("please type either 'encode' or 'decode'")
+def main():
+    global direction
+
+    while direction != "decode" and direction != "encode":
+        direction = input("Please type 'encode' to encrypt, type 'decode' to decrypt:\n")
     else:
+        text = input("Type your message:\n").lower()
+        shift = int(input("Type the shift number:\n"))
         caesar(text, shift)
+
+
+alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+
+main()
