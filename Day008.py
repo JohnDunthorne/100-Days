@@ -35,6 +35,9 @@ my_age = 43
 # paint_calc(height=test_h, width=test_w, cover=coverage)
 
 # Ceasar cipher
+
+import sys
+
 def caesar(p_text, p_shift, p_direction):
     shifted_word = ""
     for letter in p_text:
@@ -58,6 +61,14 @@ def main(direction):
         shift = int(input("Type the shift number:\n"))
         caesar(text, shift, direction)
 
+def retry(answer):
+    while answer != "n" and answer != "y":
+        answer = input("would you like to try again? press Y for yes an N for no:")
+    else:
+        if answer == "y":
+            main(direction)
+        elif answer == "n":
+            sys.exit()
 
 alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
@@ -82,3 +93,5 @@ print('''
       ''')
 direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
 main(direction)
+answer = input("would you like to try again? press Y for yes an N for no:").lower()
+retry(answer)
