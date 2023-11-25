@@ -48,7 +48,6 @@ def caesar(p_text, p_shift, p_direction):
     print(shifted_word)
 
 def main(direction):
-
     while direction != "decode" and direction != "encode":
         direction = input("Please type 'encode' to encrypt, type 'decode' to decrypt:\n")
     else:
