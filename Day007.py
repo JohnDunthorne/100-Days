@@ -15,7 +15,7 @@ def main():
     print_centered(
         """
                     Welcome to:
-    __ __   ____  ____    ____  ___ ___   ____  ____  
+     __ __   ____  ____    ____  ___ ___   ____  ____  
     |  |  | /    ||    \  /    ||   |   | /    ||    \ 
     |  |  ||  o  ||  _  ||   __|| _   _ ||  o  ||  _  |
     |  _  ||     ||  |  ||  |  ||  \_/  ||     ||  |  |
@@ -62,6 +62,7 @@ def main():
     ENDC = "\033[0m"
     chosen_word = random.choice(word_list)
     display = "_" * (len(chosen_word))
+    print("")
     print(f"Your word is this long: ", end="")
     print(BLUE + " ".join(display) + ENDC)
     numberoflives = 6
