@@ -1,7 +1,17 @@
 # hangman
 import random
 import os
+def play_again():
+    play_again = input("Would you like to play again? Y or N: \n").lower()
+    while play_again != "y" and play_again != "n":
+        print("Invalid input. Please enter Y or N.")
+        play_again = input("Would you like to play again? Y or N: \n").lower()
 
+    if play_again == "y":
+        main()
+
+    elif play_again == "n":
+        print("Thank you for playing. See you!")
 def main():
     def print_centered(message, width=80):
         print(message.center(width))
@@ -165,19 +175,10 @@ def main():
             print("")
         if display == chosen_word:
             print(GREEN + "Congratulations! You guessed the word:", chosen_word + ENDC)
-            break
+            play_again()
         else:
             print(RED + f"Sorry you ran out of tries the word was {chosen_word}" + ENDC)
             print(f"{stages[numberoflives]}")
-            break
+            play_again()
 
 main()
-play_again = input("Would you like to play again? Y or N: \n").lower()
-while play_again != "y" and play_again != "n":
-    print("Invalid input. Please enter Y or N.")
-    play_again = input("Would you like to play again? Y or N: \n").lower()
-
-if play_again == "y":
-    main()
-elif play_again == "n":
-    print("Thank you for playing. See you!")
