@@ -1,6 +1,8 @@
 # hangman
 import random
 import os
+import sys
+
 def play_again():
     play_again = input("Would you like to play again? Y or N: \n").lower()
     while play_again != "y" and play_again != "n":
@@ -12,6 +14,7 @@ def play_again():
 
     elif play_again == "n":
         print("Thank you for playing. See you!")
+        sys.exit()
 def main():
     def print_centered(message, width=80):
         print(message.center(width))
