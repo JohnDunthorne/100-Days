@@ -38,14 +38,17 @@ my_age = 43
 def caesar(p_text, p_shift, p_direction):
     shifted_word = ""
     for letter in p_text:
-        index = alphabet.index(letter)
-        if p_direction == "encode":
-            new_index = (index + p_shift) % 26
-        elif p_direction == "decode":
-            new_index = (index - p_shift) % 26
-        shifted_letter = alphabet[new_index]
-        shifted_word += shifted_letter
-    print(shifted_word)
+        if letter.isalpha():
+            index = alphabet.index(letter)
+            if p_direction == "encode":
+                new_index = (index + p_shift) % 26
+            elif p_direction == "decode":
+                new_index = (index - p_shift) % 26
+            shifted_letter = alphabet[new_index]
+            shifted_word += shifted_letter
+        else:
+            shifted_word += letter
+    print(f"your {p_direction}d word is {shifted_word}")
 
 def main(direction):
     while direction != "decode" and direction != "encode":
@@ -57,6 +60,25 @@ def main(direction):
 
 
 alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
-direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
 
+print('''
+ ________  ________  _______   ________  ________  ________       
+|\   ____\|\   __  \|\  ___ \ |\   ____\|\   __  \|\   __  \    
+\ \  \___|\ \  \|\  \ \   __/|\ \  \___|\ \  \|\  \ \  \|\  \   
+ \ \  \    \ \   __  \ \  \_|/_\ \_____  \ \   __  \ \   _  _\  
+  \ \  \____\ \  \ \  \ \  \_|\ \|____|\  \ \  \ \  \ \  \\\  \| 
+   \ \_______\ \__\ \__\ \_______\____\_\  \ \__\ \__\ \__\\\ _\ 
+    \|_______|\|__|\|__|\|_______|\_________\|__|\|__|\|__|\|__|
+                                 \|_________|                   
+                                                                
+                                                                
+ ________  ___  ________  ___  ___  _______   ________          
+|\   ____\|\  \|\   __  \|\  \|\  \|\  ___ \ |\   __  \         
+\ \  \___|\ \  \ \  \|\  \ \  \\ \\  \ \   __/|\ \  \|\  \        
+ \ \  \    \ \  \ \   ____\ \   __  \ \  \_|/_\ \   _  _\       
+  \ \  \____\ \  \ \  \___|\ \  \ \  \ \  \_|\ \ \  \\\  \|      
+   \ \_______\ \__\ \__\    \ \__\ \__\ \_______\ \__\\\ _\      
+    \|_______|\|__|\|__|     \|__|\|__|\|_______|\|__|\|__|
+      ''')
+direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
 main(direction)
