@@ -47,6 +47,35 @@
 # Calculator program
 
 
+# def add(n1, n2):
+#     return n1 + n2
+
+# def subtract(n1, n2):
+#     return n1 - n2
+
+# def multiply(n1, n2):
+#     return n1 * n2
+
+# def divide(n1, n2):
+#     return n1 / n2
+
+# operations = {
+#     "+" : add, 
+#     "-" : subtract, 
+#     "*" : multiply, 
+#     "/" : divide
+#     }
+
+# num1 = float(input("Select first number: "))
+# num2 = float(input("Select second number: "))
+# for operator in operations:
+#     print(operator)
+# operation_selection = input("Type an operator from the selection above: ")
+# operator = operations[operation_selection]
+# result = operator(num1, num2)
+# print(f"{num1} {operation_selection} {num2} = {result}")
+
+
 def add(n1, n2):
     return n1 + n2
 
@@ -60,17 +89,41 @@ def divide(n1, n2):
     return n1 / n2
 
 operations = {
-    "+" : add, 
-    "-" : subtract, 
-    "*" : multiply, 
-    "/" : divide
-    }
+    "+": add,
+    "-": subtract,
+    "*": multiply,
+    "/": divide
+}
 
-num1 = float(input("Select first number: "))
-num2 = float(input("Select second number: "))
-for operator in operations:
-    print(operator)
-operation_selection = input("Type an operator from the selection above: ")
-operator = operations[operation_selection]
-result = operator(num1, num2)
-print(f"{num1} {operation_selection} {num2} = {result}")
+continue_flag = True
+
+while continue_flag:
+    num1 = float(input("Select first number: "))
+    num2 = float(input("Select second number: "))
+
+    for operator in operations:
+        print(operator)
+
+    operation_selection = input("Type an operator from the selection above: ")
+    if operation_selection in operations:
+        operator = operations[operation_selection]
+        result = operator(num1, num2)
+        print(f"{num1} {operation_selection} {num2} = {result}")
+
+        while True:
+            continue_operation = input("Do you want to continue with the result? (yes/no): ").lower()
+            if continue_operation == "yes":
+                new_num = float(input("Enter a new number: "))
+                operation_selection = input("Type an operator from the selection above: ")
+                result = operator(result, new_num)
+                print(f"{result} {operation_selection} {new_num} = {result}")
+            elif continue_operation == "no":
+                break
+            else:
+                print("Invalid input. Please enter 'yes' or 'no'.")
+    else:
+        print("Invalid operator.")
+
+    continue_program = input("Do you want to continue with the program? (yes/no): ").lower()
+    if continue_program != "yes":
+        continue_flag = False
