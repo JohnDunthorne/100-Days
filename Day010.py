@@ -58,3 +58,13 @@ def multiply(n1, n2):
 
 def divide(n1, n2):
     return n1 / n2
+
+operations = {
+    "+" : add, 
+    "-" : subtract, 
+    "*" : multiply, 
+    "/" : divide
+    }
+
+num1 = float(input("Select first number: "))
+num2 = float(input("Select second number: "))
