@@ -70,7 +70,7 @@ num1 = float(input("Select first number: "))
 num2 = float(input("Select second number: "))
 for operator in operations:
     print(operator)
-operation_selection = input("Type an operator from the selection above")
+operation_selection = input("Type an operator from the selection above: ")
 operator = operations[operation_selection]
 result = operator(num1, num2)
 print(f"{num1} {operation_selection} {num2} = {result}")
