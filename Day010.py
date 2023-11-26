@@ -98,8 +98,8 @@ operations = {
 continue_flag = True
 
 while continue_flag:
-    num1 = float(input("Select first number: "))
-    num2 = float(input("Select second number: "))
+    num1 = float(input("Select the first number: "))
+    num2 = float(input("Select the second number: "))
 
     for operator in operations:
         print(operator)
@@ -113,10 +113,19 @@ while continue_flag:
         while True:
             continue_operation = input("Do you want to continue with the result? (yes/no): ").lower()
             if continue_operation == "yes":
+                old_result = result  # Store the old result
                 new_num = float(input("Enter a new number: "))
-                operation_selection = input("Type an operator from the selection above: ")
-                result = operator(result, new_num)
-                print(f"{result} {operation_selection} {new_num} = {result}")
+                for new_operator in operations:
+                    print(new_operator)
+                new_operation_selection = input("Type an operator from the selection above: ")
+                
+                if new_operation_selection in operations:
+                    new_operator = operations[new_operation_selection]
+                    result = new_operator(old_result, new_num)  # Use the old result in the new operation
+                    print(f"{old_result} {new_operation_selection} {new_num} = {result}")
+                else:
+                    print("Invalid operator. Please choose from the available operators.")
+                    
             elif continue_operation == "no":
                 break
             else:
@@ -127,3 +136,6 @@ while continue_flag:
     continue_program = input("Do you want to continue with the program? (yes/no): ").lower()
     if continue_program != "yes":
         continue_flag = False
+
+
+
