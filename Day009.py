@@ -69,3 +69,20 @@ print(student_grades)
 # add_new_country(country, visits, list_of_cities)
 # print(f"I've been to {travel_log[2]['country']} {travel_log[2]['visits']} times.")
 # print(f"My favourite city was {travel_log[2]['cities'][0]}.")
+
+
+
+# alternative
+
+def add_new_country(name, times_visited, cities_visited): # the parameters for the arguements, they are named differently but are positional
+  new_country = {}
+  new_country["country"] = name
+  new_country["visits"] = times_visited
+  new_country["cities"] = cities_visited
+  travel_log.append(new_country)
+
+add_new_country(country, visits, list_of_cities) # here are the positional arguments
+print(f"I've been to {travel_log[2]['country']} {travel_log[2]['visits']} times.")
+print(f"My favourite city was {travel_log[2]['cities'][0]}.")
+
+# this way we added the key value pairs to a dictionary one by one, and then appended it to the travel log
