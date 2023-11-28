@@ -2,10 +2,14 @@
 # potitional arguements
 # keyword arguements
 
-def greet(name, birthday, age): # name is the parameter, parameters expect arguments when function is called
+
+def greet(
+    name, birthday, age
+):  # name is the parameter, parameters expect arguments when function is called
     print("hi")
     print(name)
     print(f"your birthday is on {birthday} that makes you {age}")
+
 
 my_name = "John"
 my_birthday = "11/17/80"
@@ -38,6 +42,7 @@ my_age = 43
 
 import sys
 
+
 def caesar(p_text, p_shift, p_direction):
     shifted_word = ""
     for letter in p_text:
@@ -53,6 +58,7 @@ def caesar(p_text, p_shift, p_direction):
             shifted_word += letter
     print(f"your shuffled word is {shifted_word}")
 
+
 def main():
     direction = input("To encode type 'E' and to decode type 'D':\n").lower()
     while direction != "d" and direction != "e":
@@ -61,8 +67,11 @@ def main():
         text = input("Type your message:\n").lower()
         shift = int(input("Type the shift number:\n"))
         caesar(text, shift, direction)
-        answer = input("would you like to try again? press Y for yes an N for no:\n").lower()
+        answer = input(
+            "would you like to try again? press Y for yes an N for no:\n"
+        ).lower()
         retry(answer)
+
 
 def retry(answer):
     while answer != "n" and answer != "y":
@@ -73,9 +82,38 @@ def retry(answer):
         elif answer == "n":
             sys.exit()
 
-alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
-print('''
+alphabet = [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g",
+    "h",
+    "i",
+    "j",
+    "k",
+    "l",
+    "m",
+    "n",
+    "o",
+    "p",
+    "q",
+    "r",
+    "s",
+    "t",
+    "u",
+    "v",
+    "w",
+    "x",
+    "y",
+    "z",
+]
+
+print(
+    """
  ________  ________  _______   ________  ________  ________       
 |\   ____\|\   __  \|\  ___ \ |\   ____\|\   __  \|\   __  \    
 \ \  \___|\ \  \|\  \ \   __/|\ \  \___|\ \  \|\  \ \  \|\  \   
@@ -93,6 +131,9 @@ print('''
   \ \  \____\ \  \ \  \___|\ \  \ \  \ \  \_|\ \ \  \\\  \|      
    \ \_______\ \__\ \__\    \ \__\ \__\ \_______\ \__\\\ _\      
     \|_______|\|__|\|__|     \|__|\|__|\|_______|\|__|\|__|
-      ''')
+      """
+)
 
 main()
+
+#
