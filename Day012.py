@@ -14,8 +14,8 @@ def select_difficulty():
     
 def guess():
     global lives
-    print(f"you have {lives} tries left")
     while lives > 0:
+        print(f"you have {lives} tries left")
         guess = int(input("Make a guess: "))
         if guess > number_to_guess:
             print("your guess is too high")
@@ -25,6 +25,7 @@ def guess():
             lives -= 1
         else:
             print("you answered correctly")
+            break
 
 number_to_guess = random.randint(1, 100)
 
