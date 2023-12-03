@@ -24,7 +24,7 @@
 #       return True
 #   else:
 #     return False
-  
+
 # # TODO: Add more code here 👇
 # def days_in_month(p_year, p_month):
 #   month_days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
@@ -34,11 +34,10 @@
 #     else:
 #       return month_days[p_month -1]
 #   else:
-#     return month_days[p_month -1]  
+#     return month_days[p_month -1]
 
 
-  
-# #🚨 Do NOT change any of the code below 
+# #🚨 Do NOT change any of the code belo 
 # year = int(input()) # Enter a year
 # month = int(input()) # Enter a month
 # days = days_in_month(year, month)
@@ -60,9 +59,9 @@
 #     return n1 / n2
 
 # operations = {
-#     "+" : add, 
-#     "-" : subtract, 
-#     "*" : multiply, 
+#     "+" : add,
+#     "-" : subtract,
+#     "*" : multiply,
 #     "/" : divide
 #     }
 
@@ -79,21 +78,20 @@
 def add(n1, n2):
     return n1 + n2
 
+
 def subtract(n1, n2):
     return n1 - n2
+
 
 def multiply(n1, n2):
     return n1 * n2
 
+
 def divide(n1, n2):
     return n1 / n2
 
-operations = {
-    "+": add,
-    "-": subtract,
-    "*": multiply,
-    "/": divide
-}
+
+operations = {"+": add, "-": subtract, "*": multiply, "/": divide}
 
 continue_flag = True
 
@@ -111,21 +109,31 @@ while continue_flag:
         print(f"{num1} {operation_selection} {num2} = {result}")
 
         while True:
-            continue_operation = input("Do you want to continue with the result? (yes/no): ").lower()
+            continue_operation = input(
+                "Do you want to continue with the result? (yes/no): "
+            ).lower()
             if continue_operation == "yes":
                 old_result = result  # Store the old result
                 new_num = float(input("Enter a new number: "))
                 for new_operator in operations:
                     print(new_operator)
-                new_operation_selection = input("Type an operator from the selection above: ")
-                
+                new_operation_selection = input(
+                    "Type an operator from the selection above: "
+                )
+
                 if new_operation_selection in operations:
                     new_operator = operations[new_operation_selection]
-                    result = new_operator(old_result, new_num)  # Use the old result in the new operation
-                    print(f"{old_result} {new_operation_selection} {new_num} = {result}")
+                    result = new_operator(
+                        old_result, new_num
+                    )  # Use the old result in the new operation
+                    print(
+                        f"{old_result} {new_operation_selection} {new_num} = {result}"
+                    )
                 else:
-                    print("Invalid operator. Please choose from the available operators.")
-                    
+                    print(
+                        "Invalid operator. Please choose from the available operators."
+                    )
+
             elif continue_operation == "no":
                 break
             else:
@@ -133,9 +141,11 @@ while continue_flag:
     else:
         print("Invalid operator.")
 
-    continue_program = input("Do you want to continue with the program? (yes/no): ").lower()
+    continue_program = input(
+        "Do you want to continue with the program? (yes/no): "
+    ).lower()
     if continue_program != "yes":
         continue_flag = False
 
 
-
+###
