@@ -28,7 +28,7 @@ def guess():
             print("you answered correctly")
             break
     else:
-        print("sorry you ran out of lives")
+        print(f"sorry you ran out of lives, the number was {number_to_guess}")
         
 
 continue_play = True
