@@ -47,6 +47,8 @@ while continue_play:
         continue_play = False
     else:
         print("invalid input")
+
+        #loop through this last part
        
 
 
