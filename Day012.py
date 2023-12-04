@@ -12,6 +12,7 @@ def select_difficulty():
     else:
         return select_difficulty()
     
+    
 def guess():
     global lives
     while lives > 0:
@@ -26,13 +27,28 @@ def guess():
         else:
             print("you answered correctly")
             break
+    else:
+        print("sorry you ran out of lives")
+        
 
+continue_play = True
 number_to_guess = random.randint(1, 100)
+while play_again:
+    print("I'm thinking of a number between 1 and 100")
+    lives = select_difficulty()
 
-print("I'm thinking of a number between 1 and 100")
-lives = select_difficulty()
+    guess()
 
-guess()
+    play_again = input("would you like to play again?: Y or N: ").lower()
+    if play_again == "y":
+        continue_play = True
+    elif play_again == "n":
+        print("Thanks for playing")
+        continue_play = False
+    else:
+        print("invalid input")
+       
+
 
 
 
