@@ -32,8 +32,8 @@ def guess():
         
 
 continue_play = True
-number_to_guess = random.randint(1, 100)
-while play_again:
+while continue_play:
+    number_to_guess = random.randint(1, 100)
     print("I'm thinking of a number between 1 and 100")
     lives = select_difficulty()
 
