@@ -49,6 +49,7 @@ while continue_play:
         print("invalid input")
 
         #loop through this last part
+        z
        
 
 
