@@ -37,7 +37,7 @@
 #     return month_days[p_month -1]
 
 
-# #🚨 Do NOT change any of the code belo 
+# #🚨 Do NOT change any of the code bel 
 # year = int(input()) # Enter a year
 # month = int(input()) # Enter a month
 # days = days_in_month(year, month)
@@ -146,6 +146,3 @@ while continue_flag:
     ).lower()
     if continue_program != "yes":
         continue_flag = False
-
-
-###
