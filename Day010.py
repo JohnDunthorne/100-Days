@@ -146,4 +146,3 @@ while continue_flag:
     ).lower()
     if continue_program != "yes":
         continue_flag = False
-jj
