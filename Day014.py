@@ -9,7 +9,9 @@ print("Guess who has a larger social media following!")
 # keys are - 'name''follower_count''description''country'
 randomindex = randint(0, len(data) - 1)
 print(len(data))
-print(data[randomindex]['name'])
+print(f"{data[randomindex]['name']} is a {data[randomindex]['description']} from {data[randomindex]['country']}")
+
+print(Day014Art.vs)
 # pull a random secondary person
 
 # ask for higher or lower
