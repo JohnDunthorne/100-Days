@@ -1,5 +1,22 @@
 import Day014Art
 from Day014Data import data
+from random import randint
 
 print(Day014Art.logo)
-print(data)
+print("Guess who has a larger social media following!")
+
+# pull a random starting person
+
+# pull a random secondary person
+
+# ask for higher or lower
+
+# comapre result
+
+# if correct make seconady person first person
+
+# generate new seconday person
+
+# increment score
+
+# game over if wrong
