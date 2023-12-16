@@ -2,6 +2,12 @@ import Day014Art
 from Day014Data import data
 from random import randint
 
+RED = "\033[91m"
+GREEN = "\033[92m"
+YELLOW = "\033[93m"
+BLUE = "\033[94m"
+ENDC = "\033[0m"
+
 # Show the name of the game and description of the game
 print(Day014Art.logo)
 print("Guess who has a larger social media following!")
@@ -37,22 +43,27 @@ celeb1, celeb1followers = (random_person())
 celeb2, celeb2followers = (random_person())
 
 # show the initial matchup
-print(celeb1)
+print(BLUE + celeb1 + ENDC)
 print(celeb1followers)
 
 # Print the vs logo
-print(Day014Art.vs)
+print(BLUE + Day014Art.vs + ENDC)
 
-print(celeb2)
+print(BLUE + celeb2 + ENDC)
 print(celeb2followers)
 score = 0
 while True:
     if guess(celeb1followers, celeb2followers) == True:
-        print("Correct")
+        print(GREEN + "Correct" + ENDC)
         score += 1
-        print(f"Your score is {score}")
+        print(GREEN + f"Your score is {score}" + ENDC)
         new_celebs()
+        print(BLUE + celeb1 + ENDC)
+        print(celeb1followers)
+        print(BLUE + Day014Art.vs + ENDC)
+        print(BLUE + celeb2 + ENDC)
+        print(celeb2followers)
     else:
-        print(f"Sorry thats wrong, your final score was {score}")
+        print(RED + f"Sorry thats wrong, your final score was {score}" + ENDC)
         break
 
