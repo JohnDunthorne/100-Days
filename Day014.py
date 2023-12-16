@@ -6,7 +6,10 @@ print(Day014Art.logo)
 print("Guess who has a larger social media following!")
 
 # pull a random starting person
-
+# keys are - 'name''follower_count''description''country'
+randomindex = randint(0, len(data) - 1)
+print(len(data))
+print(data[randomindex]['name'])
 # pull a random secondary person
 
 # ask for higher or lower
