@@ -34,15 +34,15 @@ def new_celebs():
 
 def celeb_selection():
     print(BLUE + celeb1 + ENDC)
-    print(celeb1followers)
+    # print(celeb1followers)
 
     # Print the vs logo
     print(BLUE + Day014Art.vs + ENDC)
 
     print(BLUE + celeb2 + ENDC)
-    print(celeb2followers)   
+    # print(celeb2followers)   
     
-
+clear_terminal()
 print(Day014Art.logo)
 print("Guess who has a larger social media following!")
 
@@ -63,4 +63,3 @@ while True:
         clear_terminal()
         print(RED + (Day014Art.wrong) + GREEN + f"\nyour final score was {score}" + ENDC)
         break
-
