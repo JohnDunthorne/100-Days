@@ -12,56 +12,45 @@ print("Guess who has a larger social media following!")
 
 def random_person():
     randomindex = randint(0, len(data) - 1)
-    return (f"{data[randomindex]['name']} is a {data[randomindex]['description']} from {data[randomindex]['country']}")
+    string = (f"{data[randomindex]['name']} is a {data[randomindex]['description']} from {data[randomindex]['country']}")
+    followers = data[randomindex]['follower_count']
+    return string, followers
 
 
-celeb1 = (random_person())
-celeb2 = (random_person())
+def guess(celeb1followers, celeb2followers):
+    selection = input("Who do you think has a larger following 1, or 2? ")
+    if (selection == '1' and celeb1followers > celeb2followers) or (selection == '2' and celeb2followers > celeb1followers):
+        return True
+    else:
+        return False
+    
+    
 
+
+celeb1, celeb1followers = (random_person())
+celeb2, celeb2followers = (random_person())
+
+
+
+# make the old second celeb the new first celeb, and generate a nw random one from the second
+celeb1, celeb1followers = celeb2, celeb2followers
+celeb2, celeb2followers = (random_person())
+
+
+
+# show the initial matchup
 print(celeb1)
+print(celeb1followers)
+
+# Print the vs logo
+print(Day014Art.vs)
+
 print(celeb2)
-print(celeb1)
+print(celeb2followers)
+score = 0
 
+if guess(celeb1followers, celeb2followers) == True:
+    print("Correct")
+    score += 1
+    print(f"Your score is {score}")
 
-
-
-
-# # Print the vs logo
-# print(Day014Art.vs)
-
-# # pull a random secondary person
-# randomindex2 = randint(0, len(data) - 1)
-# print(f"{data[randomindex2]['name']} is a {data[randomindex2]['description']} from {data[randomindex2]['country']}")
-
-# # ask for higher or lower
-# follower_count_1 = data[randomindex1]['follower_count']
-# follower_count_2 = data[randomindex2]['follower_count']
-# guess = input("Who has a higher following, type 1 or 2 ")
-
-# # comapre result
-# score = 0
-# if guess == "1":
-#     if follower_count_1 > follower_count_2:
-#         print("Correct")
-#         score += 1
-#         print(f"your current score is {score}")
-#     else:
-#         print("sorry thats wrong")
-# if guess == "2":
-#     if follower_count_2 > follower_count_1:
-#         print("Correct")
-#         score += 1
-#         print(f"your current score is {score}")
-#     else:
-#         print("sorry thats wrong")
-
-# while score > 0:
-#     randomindex2 = randomindex1
-#     print(randomindex1)
-#     newrandomindex = randint(0, len(data) - 1)
-#     print(f"{data[newrandomindex]['name']} is a {data[newrandomindex]['description']} from {data[newrandomindex]['country']}")
-# # generate new seconday person
-
-# # increment score
-
-# # game over if wrong
