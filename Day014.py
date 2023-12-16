@@ -24,19 +24,17 @@ def guess(celeb1followers, celeb2followers):
     else:
         return False
     
+def new_celebs():
+    global celeb1, celeb1followers, celeb2, celeb2followers
+    celeb1, celeb1followers = celeb2, celeb2followers
+    celeb2, celeb2followers = random_person()
+
+    
     
 
-
+# Choose the two celebrities
 celeb1, celeb1followers = (random_person())
 celeb2, celeb2followers = (random_person())
-
-
-
-# make the old second celeb the new first celeb, and generate a nw random one from the second
-celeb1, celeb1followers = celeb2, celeb2followers
-celeb2, celeb2followers = (random_person())
-
-
 
 # show the initial matchup
 print(celeb1)
@@ -48,9 +46,13 @@ print(Day014Art.vs)
 print(celeb2)
 print(celeb2followers)
 score = 0
-
-if guess(celeb1followers, celeb2followers) == True:
-    print("Correct")
-    score += 1
-    print(f"Your score is {score}")
+while True:
+    if guess(celeb1followers, celeb2followers) == True:
+        print("Correct")
+        score += 1
+        print(f"Your score is {score}")
+        new_celebs()
+    else:
+        print(f"Sorry thats wrong, your final score was {score}")
+        break
 
