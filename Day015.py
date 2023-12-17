@@ -35,8 +35,10 @@ resources = {
 }
 
 
-# TODO print report (shows how many resources are left
-# check resources are sufficient when asking for a coffee
-# asks for each type of coin and calculates if its enough for the coffee
-# if not returns money or gives coffee and deducts money
-# make coffee
+# TODO: Prompt user by asking “What would you like? (espresso/latte/cappuccino):”
+# TODO: Turn off the Coffee Machine by entering “off” to the prompt
+# TODO: Print report.
+# TODO: Check resources sufficient?
+# TODO: Process coins.
+# TODO: Check transaction successful?
+# TODO: Make Coffee.
