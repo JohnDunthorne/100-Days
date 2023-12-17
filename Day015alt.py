@@ -40,7 +40,7 @@ milk_left = (resources['milk'])
 coffee_left = (resources['coffee'])
 
 continue_coffee_machine = True
-# TODO: Prompt user by asking “What would you like? (espresso/latte/cappuccino):”
+
 while continue_coffee_machine:
     while True:
         choice = input(f"“What would you like? (espresso/latte/cappuccino):”\n").lower()
