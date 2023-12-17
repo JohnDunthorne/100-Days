@@ -15,7 +15,7 @@
 #   "Neville": 62,
 
 # 🚨 Don't change the code above 👆
-# TODO-1: Create an empty dictionary called student_grades.
+# : Create an empty dictionary called student_grades.
 # student_grades = {}
 # for student in student_scores:
 #     score = student_scores[student] # this is replacing 'student' with whoever its currently looping through
@@ -60,7 +60,7 @@
 # ]
 # # Do NOT change the code above 👆
 
-# # TODO: Write the function that will allow new countries
+# # Write the function that will allow new countries
 # # to be added to the travel_log. 
 # def add_new_country(country, visits, list_of_cities):
 #   added_coutry = {"country" : country, "visits" : visits, "cities" : list_of_cities}
