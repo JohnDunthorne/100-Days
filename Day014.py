@@ -23,7 +23,8 @@ def random_person():
 
 def guess(celeb1followers, celeb2followers):
     selection = input("Who do you think has a larger following 1, or 2? ")
-    if (selection == '1' and celeb1followers >= celeb2followers) or (selection == '2' and celeb2followers >= celeb1followers):
+    if (selection == '1' and celeb1followers >= celeb2followers) or \
+       (selection == '2' and celeb2followers >= celeb1followers):
         return True
     else:
         return False
