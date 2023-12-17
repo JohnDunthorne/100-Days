@@ -36,6 +36,10 @@ resources = {
 
 
 # TODO: Prompt user by asking “What would you like? (espresso/latte/cappuccino):”
+choice = input(f"What kind of coffe would you like?\n"
+               f"espresso which costs {MENU['espresso']['cost']}\n"
+               f"latte which costs {MENU['latte']['cost']}\n"
+               f"cappuccino which costs {MENU['cappuccino']['cost']}")
 # TODO: Turn off the Coffee Machine by entering “off” to the prompt
 # TODO: Print report.
 # TODO: Check resources sufficient?
