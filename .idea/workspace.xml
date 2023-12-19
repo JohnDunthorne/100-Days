@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="08696662-5961-4d80-a977-a8f19b9f4b21" name="Changes" comment="15">
-      <change beforePath="$PROJECT_DIR$/Day015alt.py" beforeDir="false" afterPath="$PROJECT_DIR$/Day015alt.py" afterDir="false" />
-    </list>
+    <list default="true" id="08696662-5961-4d80-a977-a8f19b9f4b21" name="Changes" comment="15" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -127,7 +125,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702841483716</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="15">
+      <option name="closed" value="true" />
+      <created>1702841524172</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1702841524172</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
