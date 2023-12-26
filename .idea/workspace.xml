@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="08696662-5961-4d80-a977-a8f19b9f4b21" name="Changes" comment="15">
+      <change afterPath="$PROJECT_DIR$/Day016.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -185,22 +186,33 @@
     </task>
     <task id="LOCAL-00018" summary="15">
       <option name="closed" value="true" />
-      <created>1703289276209</created>
+      <created>1703428879718</created>
       <option name="number" value="00018" />
       <option name="presentableId" value="LOCAL-00018" />
       <option name="project" value="LOCAL" />
-      <updated>1703289276209</updated>
+      <updated>1703428879718</updated>
     </task>
     <task id="LOCAL-00019" summary="15">
       <option name="closed" value="true" />
-      <created>1703379929768</created>
+      <created>1703428929046</created>
       <option name="number" value="00019" />
       <option name="presentableId" value="LOCAL-00019" />
       <option name="project" value="LOCAL" />
-      <updated>1703379929768</updated>
+      <updated>1703428929046</updated>
     </task>
     <option name="localTasksCounter" value="20" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="15" />
